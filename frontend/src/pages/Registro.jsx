@@ -21,7 +21,7 @@ function Registro() {
     e.preventDefault();
 
     // Validar carnet (debe ser en formato 1590-21-1858)
-    const carnetRegex = /^\d{4}-\d{2}-\d{4}$/;
+    const carnetRegex = /^\d{4}-\d{2}-\d{4,6}$/;
     if (!carnetRegex.test(formData.carnet)) {
       alert("El carnet debe estar en el formato: 1590-21-1858");
       return;
