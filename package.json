@@ -2,16 +2,15 @@
   "name": "mi-proyecto",
   "version": "1.0.0",
   "description": "Proyecto de registro",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node backend/server.js"   
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "dependencies": {
     "@mui/icons-material": "^6.4.8",
-    "react-router-dom": "^7.4.0",
-    "express": "^4.17.1",    
-    "mysql2": "^2.2.5"       
-  },
-  "type": "module"   
+    "react-router-dom": "^7.4.0"
+  }
 }
+
 
