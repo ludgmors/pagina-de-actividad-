@@ -1,0 +1,196 @@
+/* Fondo de la pantalla */
+
+.inicio {
+    background-image: url('/public/fondo.jpg'); /* La ruta comienza con '/' */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+  /* Imagen con efecto glitch */
+  .inicio .imagen2 {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    transform: translateY(-50%);
+    width: 70%; /* Ajusta el tamaño de la imagen */
+    max-width: 350px; /* Para que no se haga demasiado grande */
+    animation: glitch-anim 1.5s infinite linear alternate-reverse;
+    z-index: 5; /* Coloca la imagen detrás del título y botón */
+    animation: glitch-anim 0.3s infinite linear alternate-reverse;
+  }
+  
+  
+  /* imagen 3 */
+  .imagen3 {
+    position: absolute;
+    right: 3%;
+    top: 76%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 300px;
+    z-index: 5;
+  }
+
+
+  /* Título  */
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 10;
+  }
+  
+  /* Botón centrado */
+  .btn-start {
+  
+    margin-top: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #60af4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+  
+  
+  .btn-start:hover {
+    background-color: #45a049;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-start:active {
+  transform: scale(0.90);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+  
+/* Efecto glitch con múltiples capas */
+.inicio .imagen2::before,
+.inicio .imagen2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/imagen2.png'); /* Usa la misma imagen */
+  background-size: cover;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+}
+
+/* Efecto de desplazamiento de color */
+.inicio .imagen2::before {
+  left: -2px;
+  text-shadow: -2px 0 red;
+  animation: glitch-skew 0.3s infinite linear alternate-reverse;
+}
+
+.inicio .imagen2::after {
+  left: 2px;
+  text-shadow: 2px 0 blue;
+  animation: glitch-skew 0.3s infinite linear alternate-reverse;
+}
+
+/* Animación principal de glitch */
+@keyframes glitch-anim {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-5px, 2px) rotate(1deg);
+  }
+  80% {
+    transform: translate(5px, -2px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Pequeña distorsión para el efecto glitch */
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+  50% {
+    transform: skew(5deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+/* 📱 Modo responsivo: Pantallas de menos de 768px (teléfonos) */
+@media (max-width: 768px) {
+  
+  /* Ajustar el fondo */
+  .inicio {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+
+  /* Reducir el tamaño del título en móviles */
+  h1 {
+    font-size: 2rem; /* Se hace más pequeño */
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  /* Ajustar la imagen del glitch en móviles */
+  .inicio .imagen2 {
+    width: 60%;  /* Hace la imagen más pequeña */
+    max-width: 250px; /* Limita el tamaño */
+    top: 5%; /* Baja un poco la imagen */
+    left: 6%;
+    transform: translateX(-50%); /* Centrar la imagen */
+  }
+
+  /* Ajustar la imagen 3 en móviles */
+  .imagen3 {
+    width: 35%; /* Más pequeña para no ocupar tanto espacio */
+    max-width: 200px;
+    right: 50%;
+    transform: translateX(50%);
+    top: auto;
+    bottom: 10%;
+  }
+
+  /* Centrar el botón */
+  .btn-start {
+    font-size: 1rem;
+    padding: 12px 20px;
+    width: 80%; /* Hace el botón más ancho */
+    max-width: 200px;
+  }
+}
+
+
+
+  
+  

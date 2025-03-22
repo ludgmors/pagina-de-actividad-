@@ -1,0 +1,169 @@
+.registro-container {
+    text-align: center;
+    padding: 100px;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: white;
+    height: 115vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+/* Título */
+h2 {
+  font-size: 3rem; /* Base size based on the viewport width */
+  margin-bottom: 10px;
+  padding: 0 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure the title doesn't overflow its container */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem; /* Se hace más pequeño */
+  max-width: 90%;
+  margin-top: 20px;
+}
+/* Pantallas grandes (laptops, pantallas de escritorio) */
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3rem; /* Adjust the font size for larger screens */
+    margin-bottom: 30px;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 5vw; /* Slightly smaller font size for tablets */
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 8vw; /* Even smaller font size for mobile devices */
+    margin-bottom: 15px; /* Adjust margin */
+    padding: 0 15px; /* Add some padding on mobile screens */
+  }
+}
+
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  
+  input, select {
+    padding: 8px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: background 0.3s;
+    width: 100%; /* Asegura que el botón no se salga del contenedor */
+    box-sizing: border-box;
+  }
+  
+  
+  
+  /* Estilos para los inputs y select */
+input[type="text"],
+select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilos de hover para inputs y select */
+input[type="text"]:hover,
+select:hover {
+  border-color: #36d1dc; /* Cambiar el color del borde al pasar el mouse */
+}
+
+/* Focus (cuando el campo está seleccionado) */
+input[type="text"]:focus,
+select:focus {
+  outline: none; /* Quitar el borde azul por defecto */
+  border-color: #36d1dc; /* Borde más llamativo cuando el campo está enfocado */
+  background-color: #f1f1f1; /* Fondo ligeramente gris */
+}
+
+/* Para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  input[type="text"],
+  select {
+    font-size: 0.95rem; /* Reducir el tamaño de la fuente */
+    padding: 10px; /* Reducir el padding */
+  }
+}
+
+/* Para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  input[type="text"],
+  select {
+    font-size: 0.85rem; /* Reducir el tamaño de la fuente aún más */
+    padding: 8px; /* Reducir aún más el padding */
+  }
+}
+/* Estilos para los botones */
+button {
+  padding: 9px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px; /* Borde redondeado para mayor suavidad */
+  cursor: pointer;
+  background-color: #36d1dc;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para el botón */
+}
+
+/* Efecto cuando el mouse pasa sobre el botón */
+button:hover {
+  background-color: #5b86e5; /* Color más oscuro cuando se pasa el ratón */
+  transform: translateY(-2px); /* Sube ligeramente el botón para simular interacción */
+}
+
+/* Efecto cuando el botón es presionado */
+button:active {
+  transform: scale(0.98); /* Reducción sutil del tamaño para mostrar que fue presionado */
+}
+
+/* Para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  button {
+    font-size: 0.95rem; /* Reducir ligeramente el tamaño de la fuente */
+    padding: 10px 18px; /* Reducir el padding */
+  }
+}
+
+/* Para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  button {
+    font-size: 0.85rem; /* Hacer el texto más pequeño en pantallas móviles */
+    padding: 8px 15px; /* Reducir aún más el tamaño de los botones */
+  }
+}
